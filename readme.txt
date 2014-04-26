@@ -1,6 +1,7 @@
 === Rocket Galleries  ===
 Homepage: http://rocketgalleries.com
 Contributors: MatthewRuddy
+Tags: gallery, galleries, image, images, media, rocket, rocket gallery, rocket galleries, photo, album, photo albums, photos, picture, pictures, thumbnails
 Requires at least: 3.5
 Tested up to: 3.9
 Stable tag: 0.1
