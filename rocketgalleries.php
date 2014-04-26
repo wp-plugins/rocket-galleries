@@ -195,7 +195,7 @@ class RocketGalleries {
     public static function get( $class ) {
 
         // Generate the class name, applying a filter to allow users to extend and hook their own classes instead
-        $classname = apply_filters( "rocketgalleries_get_{$class}", 'RG_'. ucfirst( str_replace( '_', '', $class ) ) );
+        $classname = apply_filters( "rocketgalleries_get_{$class}", 'RG_'. str_replace( ' ', '', ucwords( str_replace( '_', ' ', $class ) ) ) );
 
         // Get the class instance
         return $classname::get_instance();
