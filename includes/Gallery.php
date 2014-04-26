@@ -40,11 +40,6 @@ class RG_Gallery {
         // Before action
         do_action( 'rocketgalleries_before_display_gallery', $gallery );
 
-        // Bail if the gallery ID specified doesn't exist
-        if ( ! $gallery ) {
-            printf( '<p style="background-color: #ffebe8; border: 1px solid #c00; border-radius: 4px; padding: 8px !important;">' . __( 'The gallery specified (ID #%d) does not appear to exist.', 'rocketgalleries' ) . '</p>', $id );
-        }
-
         // Get our gallery template
         $template = RocketGalleries::get( 'template_loader' )->get_template_part( 'rocketgalleries', 'gallery', false );
 

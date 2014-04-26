@@ -9,9 +9,9 @@ Rocket Galleries is the gallery manager WordPress never had. Easily create and m
 
 == Description ==
 
-Rocket Galleries is the gallery manager WordPress never had. Easily create and manage galleries from one intuitive panel within WordPress.
+Rocket Galleries is the gallery manager WordPress never had. Easily create and manage galleries from one intuitive panel within WordPress. Simple, easy to use, and lightweight.
 
-The modern, easy to use interface is built to fit right into the WordPress admin area. It's built to feel like native WordPress functionality, not a plugin, which is great for impressing clients and instantly feeling familiar with the plugin's admin area. Simple, just the way we like it.
+The modern, straight forward interface is built to fit right into the WordPress admin area. It's built to feel like native WordPress functionality, not a plugin, which is great for impressing clients and instantly feeling familiar with the plugin's admin area. Simple, just the way we like it.
 
 Rocket Galleries is also developer friendly. We've made it easy to integrate the plugin with your theme by including a template loader. This allows you to create your own gallery templates and use your own HTML, CSS and Javascript easily. We've also included dozens of filters and actions within the plugin's code, allowing you to hook into the core and create your own Rocket Galleries extensions. The possibilities are limitless!
 

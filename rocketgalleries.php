@@ -2,11 +2,11 @@
 
 /*
     Plugin Name: Rocket Galleries
-    Plugin URI: http://matthewruddy.com/
+    Plugin URI: http://rocketgalleries.com/
     Version: 0.1
     Author: Matthew Ruddy
     Author URI: http://matthewruddy.com/
-    Description: An awesome gallery plugin
+    Description: Rocket Galleries is the gallery manager WordPress never had. Easily create and manage galleries from one intuitive panel within WordPress. Simple, easy to use, and lightweight.
     License: GNU General Public License v2.0 or later
     License URI: http://www.opensource.org/licenses/gpl-license.php
 
@@ -1164,6 +1164,11 @@ class RocketGalleries {
 
         // Get the gallery
         $gallery = $this->get( 'database' )->get_row( $id );
+
+        // Bail if no valid gallery was found
+        if ( ! isset( $gallery->id ) ) {
+            return sprintf( '<p style="background-color: #ffebe8; border: 1px solid #c00; border-radius: 4px; padding: 8px !important;">' . __( 'The gallery specified (ID #%d) does not appear to exist.', 'rocketgalleries' ) . '</p>', $id );
+        }
 
         /**
          * Print the gallery HTML, catch the output and return it.
