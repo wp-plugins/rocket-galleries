@@ -18,8 +18,8 @@
 
         ?>
         <div class="main-panel">
-            <h3><?php _e( 'General Settings', 'rocketgalleries' ); ?></h3>
-            <table class="form-table">
+            <h3 class="hide-if-has-template"><?php _e( 'General Settings', 'rocketgalleries' ); ?></h3>
+            <table class="hide-if-has-template form-table">
                 <tbody>
                     <tr valign="top">
                         <th scope="row">
@@ -40,7 +40,7 @@
                 </tbody>
             </table>
 
-            <div class="divider"></div>
+            <div class="hide-if-has-template divider"></div>
             
             <h3><?php _e( 'Reset Plugin', 'rocketgalleries' ); ?></h3>
             <table class="form-table">

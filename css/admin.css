@@ -314,6 +314,11 @@ p.search-box {
     margin-bottom: 6px;
 }
 
+/** ===== Conditional ===== */
+.rocketgalleries-theme-has-template .hide-if-has-template {
+    display: none;
+}
+
 /** ===== Media Queries ===== */
 @media screen and (max-width: 782px) {
 

@@ -5,10 +5,10 @@ if ( get_option( 'rocketgalleries_disable_welcome_panel' ) == false ) :
 
     // URL references
     $links = array(
-        'get-started'       => 'http://wordpress.org/plugins/rocketgalleries/installation',
-        'display-galleries' => 'http://wordpress.org/plugins/rocketgalleries/installation#display',
-        'faqs'              => 'http://wordpress.org/plugins/rocketgalleries/faq',
-        'support'           => 'http://wordpress.org/support/plugins/rocketgalleries',
+        'get-started'       => 'http://wordpress.org/plugins/rocket-galleries/installation',
+        'display-galleries' => 'http://wordpress.org/plugins/rocket-galleries/installation#display',
+        'faqs'              => 'http://wordpress.org/plugins/rocket-galleries/faq',
+        'support'           => 'http://wordpress.org/support/plugin/rocket-galleries',
     );
 
 ?>

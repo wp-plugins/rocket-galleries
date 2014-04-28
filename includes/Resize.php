@@ -37,7 +37,7 @@ class RG_Resize {
     private function __construct() {
 
         // Ensure that resized images are deleted appropriately
-        add_action( 'delete_attachment',  array( $this, 'destroy' ) );
+        add_action( 'delete_attachment', array( $this, 'destroy' ) );
 
     }
 

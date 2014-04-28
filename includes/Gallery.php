@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Gallery singleton
+ * Class used for displaying in the front-end.
  *
  * @author Matthew Ruddy
  */

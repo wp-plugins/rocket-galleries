@@ -3,7 +3,7 @@
 /*
     Plugin Name: Rocket Galleries
     Plugin URI: http://rocketgalleries.com/
-    Version: 0.1
+    Version: 0.1.1
     Author: Matthew Ruddy
     Author URI: http://matthewruddy.com/
     Description: Rocket Galleries is the gallery manager WordPress never had. Easily create and manage galleries from one intuitive panel within WordPress. Simple, easy to use, and lightweight.
@@ -73,7 +73,7 @@ class RocketGalleries {
      *
      * @var string
      */
-    public static $version = '0.1';
+    public static $version = '0.1.1';
 
     /**
      * Our array of Rocket Galleries admin pages. These are used to conditionally load scripts.
@@ -180,6 +180,7 @@ class RocketGalleries {
         add_action( 'rocketgalleries_add_gallery_actions', array( $this, 'do_gallery_actions' ) );
         add_action( 'rocketgalleries_edit_galleries_actions', array( $this, 'do_gallery_actions' ) );
         add_action( 'rocketgalleries_edit_settings_actions', array( $this, 'do_settings_actions' ) );
+        add_action( 'rocketgalleries_theme_has_template', array( $this, 'queue_has_template_class' ) );
 
         // Initialization hook for adding external functionality
         do_action_ref_array( 'rocketgalleries', array( $this ) );
@@ -360,7 +361,7 @@ class RocketGalleries {
 
         global $wp_version;
 
-        if ( version_compare( $wp_version, '3.5', '<' ) ) {
+        if ( version_compare( $wp_version, '3.8', '<' ) ) {
             deactivate_plugins( plugin_basename( __FILE__ ) );
             wp_die( __( sprintf( 'Sorry, but your version of WordPress, <strong>%s</strong>, is not supported. The plugin has been deactivated. <a href="%s">Return to the Dashboard.</a>', $wp_version, admin_url() ), 'rocketgalleries' ) );
             return false;
@@ -467,13 +468,19 @@ class RocketGalleries {
         
         // Add capability for each applicable user role
         foreach ( $wp_roles->roles as $role => $info ) {
+
+            // Get the user role object
             $user_role = get_role( $role );
+
             foreach ( $capabilities as $capability ) {
-                if ( $action == 'add' )
+                if ( $action == 'add' ) {
                     $this->add_capability( $capability, $user_role );
-                elseif ( $action == 'remove' )
+                }
+                elseif ( $action == 'remove' ) {
                     $this->remove_capability( $capability, $user_role );
+                }
             }
+
         }
 
     }
@@ -762,10 +769,41 @@ class RocketGalleries {
             remove_action( 'init', array( $this, 'enqueue_gallery_assets' ) );
 
             // An action for good measure
-            do_action( 'rocketgalleries_theme_has_template' );
+            add_action( 'init', create_function( '', 'do_action( \'rocketgalleries_theme_has_template\' );' ) );
             
         }
         
+    }
+
+    /**
+     * Function used to enqueue the "admin_theme_has_template_classes" function correctly.
+     * Only fired when the plugin has detected that the theme has a custom front-end template for the plugin.
+     *
+     * This function should be called using the "after_setup_theme" action.
+     *
+     * @return void
+     */
+    public function queue_has_template_class() {
+
+        // Only load the action if we're on one of our own plugin pages
+        add_filter( 'admin_body_class', array( $this, 'admin_has_template_class' ) );
+
+    }
+
+    /**
+     * Adds a class to the admin body classes the tells us that the theme being used has a custom front-end template for our plugin.
+     *
+     * @return array
+     */
+    public function admin_has_template_class( $class ) {
+
+        // Add the class if we are on one of our own plugin pages
+        if ( $this->is_plugin_page ) {
+            $class .= ' rocketgalleries-theme-has-template ';
+        }
+
+        return $class;
+
     }
     
     /**
@@ -1173,7 +1211,7 @@ class RocketGalleries {
         /**
          * Print the gallery HTML, catch the output and return it.
          * We do this to avoid a nasty WordPress formatting bug that would cause the gallery
-         * to always be printed at the top of the box unlesss the HTML was returned.
+         * to always be printed at the top of the post/page unlesss the HTML was returned.
          */
         ob_start();
         $this->get( 'gallery' )->display( $gallery );

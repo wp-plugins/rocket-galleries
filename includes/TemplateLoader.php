@@ -3,8 +3,7 @@
 /**
  * Template loader.
  *
- * @package Gamajo_Template_Loader
- * @author  Gary Jones
+ * @author Matthew Ruddy
  */
 class RG_TemplateLoader {
 
