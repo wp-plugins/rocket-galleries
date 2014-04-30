@@ -50,7 +50,7 @@
                             <label for="reset"><?php _e( 'Plugin Settings', 'rocketgalleries' ); ?></label>
                         </th>
                         <td>
-                            <input type="submit" name="reset" class="button button-secondary warn_reset" value="<?php _e( 'Reset Plugin', 'rocketgalleries' ); ?>">
+                            <input type="submit" name="reset" class="button button-secondary warn" value="<?php _e( 'Reset Plugin', 'rocketgalleries' ); ?>">
                             <p class="description"><?php _e( 'Click this button to reset the plugin to its default settings. This cannot be reversed, so be sure before you do this!', 'rocketgalleries' ); ?></p>
                         </td>
                     </tr>
