@@ -3,7 +3,7 @@
 /*
     Plugin Name: Rocket Galleries
     Plugin URI: http://rocketgalleries.com/
-    Version: 0.1.3
+    Version: 0.1.4
     Author: Matthew Ruddy
     Author URI: http://matthewruddy.com/
     Description: Rocket Galleries is the gallery manager WordPress never had. Easily create and manage galleries from one intuitive panel within WordPress. Simple, easy to use, and lightweight.
@@ -73,7 +73,7 @@ class RocketGalleries {
      *
      * @var string
      */
-    public static $version = '0.1.3';
+    public static $version = '0.1.4';
 
     /**
      * Our array of Rocket Galleries admin pages. These are used to conditionally load scripts.
@@ -203,7 +203,7 @@ class RocketGalleries {
 
         // Get the class instance, if it exists
         if ( class_exists( $classname ) ) {
-            return $classname::get_instance();
+            return call_user_func( array( $classname, 'get_instance' ) );
         }
         
     }
