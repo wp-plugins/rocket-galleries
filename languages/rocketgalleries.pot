@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rocket Galleries\n"
-"POT-Creation-Date: 2014-04-23 18:53-0000\n"
-"PO-Revision-Date: 2014-04-23 18:54-0000\n"
+"POT-Creation-Date: 2014-05-01 17:38-0000\n"
+"PO-Revision-Date: 2014-05-01 17:38-0000\n"
 "Last-Translator: \n"
 "Language-Team: Matthew Ruddy <support@rocketgalleries.com>\n"
 "Language: en_GB\n"
@@ -18,6 +18,14 @@ msgstr ""
 #: admin/edit-gallery.php:5
 #, php-format
 msgid "%s Gallery: "
+msgstr ""
+
+#: admin/edit-gallery.php:5 admin/list-galleries.php:140
+msgid "Edit"
+msgstr ""
+
+#: admin/edit-gallery.php:5
+msgid "Add"
 msgstr ""
 
 #: admin/edit-gallery.php:6
@@ -44,7 +52,7 @@ msgstr ""
 msgid "Save Gallery"
 msgstr ""
 
-#: admin/edit-settings.php:3 rocketgalleries.php:590
+#: admin/edit-settings.php:3 rocketgalleries.php:602
 msgid "Edit Settings"
 msgstr ""
 
@@ -116,7 +124,7 @@ msgstr ""
 msgid "Galleries "
 msgstr ""
 
-#: admin/list-galleries.php:13 rocketgalleries.php:583
+#: admin/list-galleries.php:13 rocketgalleries.php:595
 msgid "Add New"
 msgstr ""
 
@@ -147,7 +155,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: admin/list-galleries.php:59
+#: admin/list-galleries.php:59 admin/list-galleries.php:169
 msgid "1 gallery"
 msgstr ""
 
@@ -202,10 +210,6 @@ msgstr ""
 
 #: admin/list-galleries.php:140
 msgid "Edit this gallery"
-msgstr ""
-
-#: admin/list-galleries.php:140
-msgid "Edit"
 msgstr ""
 
 #: admin/list-galleries.php:141
@@ -282,178 +286,178 @@ msgstr ""
 msgid " Copy"
 msgstr ""
 
-#: includes/Gallery.php:45
-#, php-format
-msgid "The gallery specified (ID #%d) does not appear to exist."
-msgstr ""
-
 #: includes/Resize.php:59
 msgid "No image URL has been entered."
 msgstr ""
 
-#: rocketgalleries.php:559 rocketgalleries.php:560 rocketgalleries.php:574
+#: rocketgalleries.php:571 rocketgalleries.php:572 rocketgalleries.php:586
 msgid "Galleries"
 msgstr ""
 
-#: rocketgalleries.php:575
+#: rocketgalleries.php:587
 msgid "All Galleries"
 msgstr ""
 
-#: rocketgalleries.php:582
+#: rocketgalleries.php:594
 msgid "Add New Gallery"
 msgstr ""
 
-#: rocketgalleries.php:591
+#: rocketgalleries.php:603
 msgid "Settings"
 msgstr ""
 
-#: rocketgalleries.php:650
+#: rocketgalleries.php:662
 msgid "Add a Gallery"
 msgstr ""
 
-#: rocketgalleries.php:650
+#: rocketgalleries.php:662
 msgid " Add Gallery"
 msgstr ""
 
-#: rocketgalleries.php:686
+#: rocketgalleries.php:698
 msgid "Please select a gallery"
 msgstr ""
 
-#: rocketgalleries.php:698
+#: rocketgalleries.php:710
 msgid "Add a gallery"
 msgstr ""
 
-#: rocketgalleries.php:699
+#: rocketgalleries.php:711
 msgid "Select a gallery to insert from the box below."
 msgstr ""
 
-#: rocketgalleries.php:704
+#: rocketgalleries.php:716
 msgid "Select a gallery"
 msgstr ""
 
-#: rocketgalleries.php:714
+#: rocketgalleries.php:726
 msgid "Insert Gallery"
 msgstr ""
 
-#: rocketgalleries.php:715
+#: rocketgalleries.php:727
 msgid "Close"
 msgstr ""
 
-#: rocketgalleries.php:732
+#: rocketgalleries.php:744
 msgid "Gallery"
 msgstr ""
 
-#: rocketgalleries.php:814
+#: rocketgalleries.php:857
 msgid "Galleries have been <strong>duplicated</strong> successfully."
 msgstr ""
 
-#: rocketgalleries.php:818
+#: rocketgalleries.php:861
 msgid ""
 "Failed to duplicate galleries. An error has occurred. Please try again or "
 "contact support."
 msgstr ""
 
-#: rocketgalleries.php:822
+#: rocketgalleries.php:865
 msgid "Galleries have been <strong>deleted</strong> successfully."
 msgstr ""
 
-#: rocketgalleries.php:826
+#: rocketgalleries.php:869
 msgid ""
 "Failed to delete galleries. An error has occurred. Please try again or "
 "contact support."
 msgstr ""
 
-#: rocketgalleries.php:831
+#: rocketgalleries.php:874
 msgid "Gallery has been <strong>duplicated</strong> successfully."
 msgstr ""
 
-#: rocketgalleries.php:835
+#: rocketgalleries.php:878
 msgid ""
 "Failed to duplicate gallery. An error has occurred. Please try again or "
 "contact support."
 msgstr ""
 
-#: rocketgalleries.php:839
+#: rocketgalleries.php:882
 msgid "Gallery has been <strong>deleted</strong> successfully."
 msgstr ""
 
-#: rocketgalleries.php:843
+#: rocketgalleries.php:886
 msgid ""
 "Failed to delete slideshow. An error has occurred. Please try again or "
 "contact support."
 msgstr ""
 
-#: rocketgalleries.php:944 rocketgalleries.php:1127
+#: rocketgalleries.php:987 rocketgalleries.php:1170
 msgid "Security check has failed. Save has been prevented. Please try again."
 msgstr ""
 
-#: rocketgalleries.php:953
+#: rocketgalleries.php:996
 msgid ""
 "Failed to save gallery. An error has occurred. Please try again or contact "
 "support."
 msgstr ""
 
-#: rocketgalleries.php:956
+#: rocketgalleries.php:999
 msgid "Gallery has been <strong>saved</strong> successfully."
 msgstr ""
 
-#: rocketgalleries.php:995
+#: rocketgalleries.php:1038
 msgid ""
 "Security check has failed. Bulk action has been prevented. Please try again."
 msgstr ""
 
-#: rocketgalleries.php:1051
+#: rocketgalleries.php:1094
 msgid ""
 "Security check has failed. Duplicate has been prevented. Please try again."
 msgstr ""
 
-#: rocketgalleries.php:1073
+#: rocketgalleries.php:1116
 msgid "Security check has failed. Delete has been prevented. Please try again."
 msgstr ""
 
-#: rocketgalleries.php:1109
+#: rocketgalleries.php:1152
 msgid "Security check has failed. Reset has been prevented. Please try again."
 msgstr ""
 
-#: rocketgalleries.php:1118
+#: rocketgalleries.php:1161
 msgid "Plugin has been reset successfully."
 msgstr ""
 
-#: rocketgalleries.php:1138
+#: rocketgalleries.php:1181
 msgid "Settings have been <strong>saved</strong> successfully."
 msgstr ""
 
-#: rocketgalleries.php:1162
+#: rocketgalleries.php:1205
 msgid ""
 "Looks like you've forgotten to add a gallery ID to this shortcode. Oh dear!"
 msgstr ""
 
-#: rocketgalleries.php:1297
+#: rocketgalleries.php:1213
+#, php-format
+msgid "The gallery specified (ID #%d) does not appear to exist."
+msgstr ""
+
+#: rocketgalleries.php:1345
 msgid "Are you sure you wish to do this? This cannot be reversed."
 msgstr ""
 
-#: rocketgalleries.php:1298
+#: rocketgalleries.php:1346
 msgid "Are you sure you wish to delete this image? This cannot be reversed."
 msgstr ""
 
-#: rocketgalleries.php:1299
+#: rocketgalleries.php:1347
 msgid ""
 "Are you sure you wish to delete all of this galleries images? This cannot be "
 "reversed."
 msgstr ""
 
-#: rocketgalleries.php:1301
+#: rocketgalleries.php:1349
 msgid "Add Images to Gallery"
 msgstr ""
 
-#: rocketgalleries.php:1302
+#: rocketgalleries.php:1350
 msgid "Insert into gallery"
 msgstr ""
 
-#: rocketgalleries.php:1303
+#: rocketgalleries.php:1351
 msgid "Use this image"
 msgstr ""
 
-#: rocketgalleries.php:1304
+#: rocketgalleries.php:1352
 msgid "Are you sure you wish to discard changes?"
 msgstr ""

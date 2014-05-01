@@ -2,7 +2,7 @@
     <form name="post" action="admin.php?page=<?php echo $page; ?>&amp;edit=<?php echo esc_attr( $gallery->id ); ?>" method="post">
         <div id="icon-edit" class="icon32 icon32-posts-post"><br></div>
         <h2>
-            <?php printf( __( '%s Gallery: ', 'rocketgalleries' ), ( isset( $_GET['edit'] ) ) ? 'Edit' : 'Add' ); ?>
+            <?php printf( __( '%s Gallery: ', 'rocketgalleries' ), ( isset( $_GET['edit'] ) ) ? __( 'Edit', 'rocketgalleries' ) : __( 'Add', 'rocketgalleries' ) ); ?>
             <input type="text" name="name" id="name" size="30" autocomplete="off" placeholder="<?php _e( 'Enter a gallery name', 'rocketgalleries' ); ?>" value="<?php echo esc_attr( $gallery->name ); ?>">
         </h2>   
 

@@ -81,10 +81,10 @@ class RG_Database {
     private function is_json( $string ) {
 
         // Decode the string
-        json_decode( $string );
+        $data = @json_decode( $string );
 
         // Return true or false based on if we have encountered any JSON errors
-        return ( json_last_error() == JSON_ERROR_NONE );
+        return ( ! is_null( $data ) ) ? true : false;
 
     }
 

@@ -166,7 +166,7 @@
             </div>
 
             <div class="tablenav-pages">
-                <span class="displaying-num"><?php echo count( $galleries ); ?> galleries</span>
+                <span class="displaying-num"><?php printf( _n( '1 gallery', '%d galleries', count( $galleries ), 'rocketgalleries' ), count( $galleries ) ); ?></span>
                 <span class="pagination-links">
                     <a class="first-page <?php if ( $paged == 1 ) echo 'disabled'; ?>" title="<?php _e( 'Go to the first page', 'rocketgalleries' ); ?>" href="admin.php?page=<?php echo $page; ?>">«</a>
                     <a class="prev-page <?php if ( $paged == 1 ) echo 'disabled'; ?>" title="<?php _e( 'Go to the previous page', 'rocketgalleries' ); ?>" href="admin.php?page=<?php echo $page; ?>&amp;paged=<?php if ( $paged == 1 ) { echo 1; } else { echo ( $paged - 1 ); } ?>">‹</a>
