@@ -12,7 +12,7 @@ if ( ! function_exists( 'rocketgalleries' ) ) {
 
         // Handle if just an ID is provided
         if ( is_int( $atts ) ) {
-            $atts = array( 'id' => $id );
+            $atts = array( 'id' => $atts );
         }
 
         // Display the gallery

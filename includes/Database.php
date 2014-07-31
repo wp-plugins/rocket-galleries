@@ -58,7 +58,6 @@ class RG_Database {
 
         // Actions & Filters
         add_filter( 'rocketgalleries_query_row', array( $this, 'decode_json' ) );
-        add_filter( 'rocketgalleries_query_rows', array( $this, 'decode_json' ) );
         add_filter( 'rocketgalleries_add_row', array( $this, 'encode_json' ) );
         add_filter( 'rocketgalleries_update_row', array( $this, 'encode_json' ) );
         add_filter( 'rocketgalleries_pre_gallery', array( $this, 'merge_defaults' ) );
@@ -358,11 +357,16 @@ class RG_Database {
         // Get the rows
         $rows = $wpdb->get_results( implode( ' ', $query ) );
 
+        // Run each row through the query row filter
+        foreach ( $rows as $key => $row ) {
+            $rows[ $key ] = apply_filters( 'rocketgalleries_query_row', $row );
+        }
+
         // Return & filter for good measure
-        return apply_filters( 'rocketgalleries_query_rows', (object) array(
+        return (object) array(
             'rows'      => $rows,
             'max_pages' => $args['max_pages']
-        ) );
+        );
 
     }
 
