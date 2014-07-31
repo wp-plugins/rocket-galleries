@@ -3,8 +3,8 @@ Homepage: http://rocketgalleries.com
 Contributors: MatthewRuddy
 Tags: gallery, galleries, image, images, media, rocket, rocket gallery, rocket galleries, photo, album, photo albums, photos, picture, pictures, thumbnails
 Requires at least: 3.8
-Tested up to: 3.9
-Stable tag: 0.1.5
+Tested up to: 4.0
+Stable tag: 0.2
 
 Rocket Galleries is the gallery manager WordPress never had. Easily create and manage galleries from one intuitive panel.
 
@@ -54,6 +54,11 @@ Nothing here yet, but we're constantly working on improving. If you've a questio
 6. Preview of default gallery styling with the Twenty Fourteen theme.
 
 == Changelog ==
+
+= 0.2 =
+* Gallery class has now been made re-usable. Easily use it to display your own gallery programatically.
+* Added “Link To” option for linking gallery images to Attachment Page, full size image, or other custom options.
+* Many more under the hood improvements to prepare the plugin to future plans!
 
 = 0.1.5 =
 * Fixed bug that prevented creation of galleries when using PHP v5.2.*.
