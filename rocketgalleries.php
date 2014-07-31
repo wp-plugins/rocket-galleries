@@ -97,12 +97,14 @@ class RocketGalleries {
             require plugin_dir_path( __FILE__ ) . '/includes/Gallery.php';
             require plugin_dir_path( __FILE__ ) . '/includes/Resize.php';
             require plugin_dir_path( __FILE__ ) . '/includes/TemplateLoader.php';
+            require plugin_dir_path( __FILE__ ) . '/includes/Update.php';
             
             // Initiate components
             self::$instance                  = new self;
             self::$instance->database        = RG_Database::get_instance();
             self::$instance->resize          = RG_Resize::get_instance();
             self::$instance->template_loader = RG_TemplateLoader::get_instance();
+            self::$instance->update          = RG_Update::get_instance();
 
         }
 
